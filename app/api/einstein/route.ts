@@ -3,7 +3,7 @@ import { RemoteRunnable } from "langchain/runnables/remote";
 
 async function* makeIterator(query: string) {
 
-  const langserveUrl = process.env.EINSTEIN_URL as string;
+  const langserveUrl = process.env.LANGSERVE_URL as string;
 
   const chain = new RemoteRunnable({
     url: langserveUrl,
